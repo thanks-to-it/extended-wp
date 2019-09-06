@@ -1,19 +1,19 @@
 <?php
 /**
- * Easy Referral for WooCommerce - WordPress Tax
+ * Easy Referral for WooCommerce - WP_Tax_Manager
  *
  * @version 1.0.0
  * @since   1.0.0
  * @author  Thanks to IT
  */
 
-namespace ThanksToIT\ERWC\WordPress;
+namespace ThanksToIT\ExtendedWP\WordPress;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 } // Exit if accessed directly
 
-if ( ! class_exists( 'ThanksToIT\ERWC\WordPress\WP_Tax_Manager' ) ) {
+if ( ! class_exists( 'ThanksToIT\ExtendedWP\WordPress\WP_Tax_Manager' ) ) {
 
 	class WP_Tax_Manager {
 

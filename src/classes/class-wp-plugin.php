@@ -7,13 +7,13 @@
  * @author  Thanks to IT
  */
 
-namespace ThanksToIT\ERWC\WordPress;
+namespace ThanksToIT\ExtendedWP\WordPress;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 } // Exit if accessed directly
 
-if ( ! class_exists( 'ThanksToIT\ERWC\WordPress\WP_Plugin' ) ) {
+if ( ! class_exists( 'ThanksToIT\ExtendedWP\WordPress\WP_Plugin' ) ) {
 
 	class WP_Plugin {
 		public $plugin_info = array();
