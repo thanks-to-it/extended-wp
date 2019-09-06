@@ -9,13 +9,15 @@
 
 namespace ThanksToIT\ExtendedWP\WordPress;
 
+use ThanksToIT\DPWP\Design_Pattern\Singleton;
+
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 } // Exit if accessed directly
 
 if ( ! class_exists( 'ThanksToIT\ExtendedWP\WordPress\WP_Plugin' ) ) {
 
-	class WP_Plugin {
+	class WP_Plugin extends Singleton {
 		public $plugin_info = array();
 
 		function init() {
