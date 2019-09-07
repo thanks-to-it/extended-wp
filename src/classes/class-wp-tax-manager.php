@@ -7,13 +7,13 @@
  * @author  Thanks to IT
  */
 
-namespace ThanksToIT\ExtendedWP\WordPress;
+namespace ThanksToIT\ExtendedWP;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 } // Exit if accessed directly
 
-if ( ! class_exists( 'ThanksToIT\ExtendedWP\WordPress\WP_Tax_Manager' ) ) {
+if ( ! class_exists( 'ThanksToIT\ExtendedWP\WP_Tax_Manager' ) ) {
 
 	class WP_Tax_Manager {
 
