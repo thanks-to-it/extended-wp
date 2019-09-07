@@ -28,8 +28,7 @@ if ( ! class_exists( 'ThanksToIT\ExtendedWP\WP_Tax_Manager' ) ) {
 		function create_terms( $args = array() ) {
 			$args = wp_parse_args( $args, array(
 				'tax_id'          => '',
-				'terms'           => array(),
-				'plugin_filepath' => '',
+				'terms'           => array(),				
 				'option_name'     => $args . '_' . 'terms',
 				'only_once'       => true
 			) );
