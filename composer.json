@@ -13,8 +13,7 @@
       "email": "pablo.sg.pacheco@gmail.com"
     }
   ],
-  "config": {
-    "preferred-install": "dist",
+  "config": {    
     "optimize-autoloader": true
   },
   "require": {
