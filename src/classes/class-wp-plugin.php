@@ -9,7 +9,7 @@
 
 namespace ThanksToIT\ExtendedWP;
 
-use ThanksToIT\DPWP\Design_Pattern\Singleton;
+use ThanksToIT\DPWP\Singleton;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
