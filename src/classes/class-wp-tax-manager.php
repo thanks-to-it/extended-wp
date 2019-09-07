@@ -70,7 +70,7 @@ if ( ! class_exists( 'ThanksToIT\ExtendedWP\WP_Tax_Manager' ) ) {
 				$tax_id,
 				array(
 					'slug'        => $term['slug'],
-					'description' => isset ( $pos['description'] ) ? $term['description'] : ''
+					'description' => isset ( $term['description'] ) ? $term['description'] : ''
 				)
 			);
 		}
