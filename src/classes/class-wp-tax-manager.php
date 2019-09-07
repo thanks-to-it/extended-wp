@@ -27,17 +27,16 @@ if ( ! class_exists( 'ThanksToIT\ExtendedWP\WP_Tax_Manager' ) ) {
 		 */
 		function create_terms( $args = array() ) {
 			$args = wp_parse_args( $args, array(
-				'tax_id'          => '',
-				'terms'           => array(),				
-				'option_name'     => $args['tax_id'] . '_' . 'terms',
-				'only_once'       => true
+				'tax_id'      => '',
+				'terms'       => array(),
+				'option_name' => $args['tax_id'] . '_' . 'terms',
+				'only_once'   => true
 			) );
 
-			$tax_id = $args['tax_id'];
-			register_taxonomy( $tax_id, '', array() );
+			$tax_id      = $args['tax_id'];
 			$terms       = $args['terms'];
 			$option_name = $args['option_name'];
-			if ( count( get_option( $option_name, array() ) > 0 ) ) {
+			if ( $args['only_once'] && count( get_option( $option_name, array() ) ) > 0 ) {
 				return;
 			}
 			$terms_ids = array();
