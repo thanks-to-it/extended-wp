@@ -39,6 +39,7 @@ if ( ! class_exists( 'ThanksToIT\ExtendedWP\WP_Tax_Manager' ) ) {
 			if ( $args['only_once'] && count( get_option( $option_name, array() ) ) > 0 ) {
 				return;
 			}
+			register_taxonomy( $args['tax_id'], '', array() );
 			$terms_ids = array();
 			foreach ( $terms as $term ) {
 				$response = $this->add_term( $term, $tax_id );
