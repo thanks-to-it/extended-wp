@@ -29,7 +29,7 @@ if ( ! class_exists( 'ThanksToIT\ExtendedWP\WP_Tax_Manager' ) ) {
 			$args = wp_parse_args( $args, array(
 				'tax_id'          => '',
 				'terms'           => array(),				
-				'option_name'     => $args . '_' . 'terms',
+				'option_name'     => $args['tax_id'] . '_' . 'terms',
 				'only_once'       => true
 			) );
 
