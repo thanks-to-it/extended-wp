@@ -42,7 +42,7 @@ if ( ! class_exists( 'ThanksToIT\ExtendedWP\WP_Plugin' ) ) {
 				$locale = pll_current_language( 'locale' );
 			}
 			load_textdomain( $domain, trailingslashit( WP_LANG_DIR ) . 'plugins' . '/' . $domain . '/' . $domain . '-' . $locale . '.mo' );
-			load_plugin_textdomain( $domain, false, dirname( plugin_basename( $this->plugin_info['filesystem_path'] ) ) . '/languages/' );
+			load_plugin_textdomain( $domain, false, $this->plugin_info['languages_path'] );
 		}
 
 		/**
@@ -68,10 +68,15 @@ if ( ! class_exists( 'ThanksToIT\ExtendedWP\WP_Plugin' ) ) {
 		 * @param $args
 		 */
 		function setup( $args ) {
-			$args              = wp_parse_args( $args, array(
-				'filesystem_path' => '',  // __FILE__
-				'text_domain'     => ''
+			$args = wp_parse_args( $args, array(
+				'filesystem_path'    => '',  // __FILE__
+				'languages_path'     => '',
+				'languages_rel_path' => '/src/languages',
+				'text_domain'        => ''
 			) );
+			if ( empty( $args['languages_path'] ) ) {
+				$args['languages_path'] = dirname( plugin_basename( $args['filesystem_path'] ) ) . trailingslashit( $args['languages_rel_path'] );
+			}
 			$this->plugin_info = $args;
 		}
 
