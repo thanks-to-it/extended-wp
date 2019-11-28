@@ -69,6 +69,7 @@ if ( ! class_exists( 'ThanksToIT\ExtendedWP\WP_Plugin' ) ) {
 		 */
 		function setup( $args ) {
 			$args = wp_parse_args( $args, array(
+				'version'            => '',
 				'filesystem_path'    => '',  // __FILE__
 				'languages_path'     => '',
 				'languages_rel_path' => '/src/languages',
