@@ -37,11 +37,11 @@ if ( ! class_exists( 'ThanksToIT\ExtendedWP\WP_Plugin' ) ) {
 		 */
 		public function handle_localization() {
 			$domain = $this->plugin_info['text_domain'];
-			$locale = apply_filters( 'plugin_locale', is_admin() ? get_user_locale() : get_locale(), $domain );
+			/*$locale = apply_filters( 'plugin_locale', is_admin() ? get_user_locale() : get_locale(), $domain );
 			if ( function_exists( 'pll_current_language' ) ) {
 				$locale = pll_current_language( 'locale' );
 			}
-			load_textdomain( $domain, trailingslashit( WP_LANG_DIR ) . 'plugins' . '/' . $domain . '/' . $domain . '-' . $locale . '.mo' );
+			load_textdomain( $domain, trailingslashit( WP_LANG_DIR ) . 'plugins' . '/' . $domain . '/' . $domain . '-' . $locale . '.mo' );*/
 			load_plugin_textdomain( $domain, false, $this->plugin_info['languages_path'] );
 		}
 
